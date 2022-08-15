@@ -1,1 +1,3 @@
-console.log("Hello, world!");
+import loadPage from './loadPage.js';
+
+loadPage();
