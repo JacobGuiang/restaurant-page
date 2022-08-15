@@ -1,8 +1,8 @@
 import FoodImg from './food.jpg';
 
-export default function loadPage() {
+export default function loadHome() {
   const content = document.getElementById('content');
-
+  
   const img = new Image();
   img.src = FoodImg;
   content.appendChild(img);
