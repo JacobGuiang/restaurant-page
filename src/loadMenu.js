@@ -1,3 +1,25 @@
+export default function loadMenu() {
+  const content = document.getElementById('content');
+
+  const headline = document.createElement('div');
+  headline.classList.add('headline');
+  headline.textContent = 'Menu';
+  content.appendChild(headline);
+
+  const menuContainer = document.createElement('div');
+  menuContainer.classList.add('menu-container');
+  menuContainer.id = 'menu-container';
+
+  content.appendChild(menuContainer);
+
+  appendToMenu('Water', '$10');
+  appendToMenu('Water With Ice', '$12');
+  appendToMenu('Beef Belly', '$20');
+  appendToMenu('Beef Bulgogi', '$25');
+  appendToMenu('Beef Short Ribs', '$35');
+  appendToMenu('Pork Belly', '$18');
+}
+
 function appendToMenu(item, price) {
   const menuContainer = document.getElementById('menu-container');
 
@@ -16,26 +38,4 @@ function appendToMenu(item, price) {
   menuItemContainer.appendChild(menuItemPrice);
   
   menuContainer.appendChild(menuItemContainer);
-}
-
-export default function loadMenu() {
-  const content = document.getElementById('content');
-
-  const headline = document.createElement('div');
-  headline.classList.add('headline');
-  headline.textContent = 'Menu';
-  content.appendChild(headline);
-
-  const menuContainer= document.createElement('div');
-  menuContainer.classList.add('menu-container');
-  menuContainer.id = 'menu-container';
-
-  content.appendChild(menuContainer);
-
-  appendToMenu('Water', '$10');
-  appendToMenu('Water With Ice', '$12');
-  appendToMenu('Beef Belly', '$20');
-  appendToMenu('Beef Bulgogi', '$25');
-  appendToMenu('Beef Short Ribs', '$35');
-  appendToMenu('Pork Belly', '$18');
 }
