@@ -38,7 +38,6 @@ function initPageLoad() {
   });
 
   nav.appendChild(navContact);
-
   document.body.insertBefore(nav, document.body.firstChild);
 
   loadHome();
