@@ -3,13 +3,12 @@ export default function loadContact() {
 
   const headline = document.createElement('div');
   headline.classList.add('headline');
-  headline.textContent = 'Contact Us';
+  headline.textContent = 'Contact';
   content.appendChild(headline);
 
   const contactsContainer = document.createElement('div');
   contactsContainer.classList.add('contacts-container');
   contactsContainer.id = 'contacts-container';
-
   content.appendChild(contactsContainer);
 
   appendContact('Phone', '+9 999-999-9999');
@@ -25,12 +24,11 @@ function appendContact(name, details) {
   const contactItemName = document.createElement('div');
   contactItemName.classList.add('contact-item-name');
   contactItemName.innerText = name;
+  contactItemContainer.appendChild(contactItemName);
 
   const contactItemsDetails = document.createElement('div');
   contactItemsDetails.classList.add('contact-item-details');
   contactItemsDetails.innerText = details;
-
-  contactItemContainer.appendChild(contactItemName);
   contactItemContainer.appendChild(contactItemsDetails);
   
   contactsContainer.appendChild(contactItemContainer);

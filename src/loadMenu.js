@@ -9,15 +9,12 @@ export default function loadMenu() {
   const menuContainer = document.createElement('div');
   menuContainer.classList.add('menu-container');
   menuContainer.id = 'menu-container';
-
   content.appendChild(menuContainer);
 
   appendToMenu('Water', '$10');
   appendToMenu('Water With Ice', '$12');
-  appendToMenu('Beef Belly', '$20');
-  appendToMenu('Beef Bulgogi', '$25');
-  appendToMenu('Beef Short Ribs', '$35');
-  appendToMenu('Pork Belly', '$18');
+  appendToMenu('Oatmeal', '$20');
+  appendToMenu('Oatmeal with Banana and Cinnamon', '$25');
 }
 
 function appendToMenu(item, price) {
@@ -29,12 +26,11 @@ function appendToMenu(item, price) {
   const menuItemName = document.createElement('div');
   menuItemName.classList.add('menu-item-name');
   menuItemName.innerText = item;
+  menuItemContainer.appendChild(menuItemName);
 
   const menuItemPrice = document.createElement('div');
   menuItemPrice.classList.add('menu-item-price');
   menuItemPrice.innerText = price;
-
-  menuItemContainer.appendChild(menuItemName);
   menuItemContainer.appendChild(menuItemPrice);
   
   menuContainer.appendChild(menuItemContainer);

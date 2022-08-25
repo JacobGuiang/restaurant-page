@@ -6,33 +6,39 @@ import './style.css';
 function initPageLoad() {
   const content = document.getElementById('content');
 
-  const nav = document.createElement('div');
+  const nav = document.createElement('ul');
   nav.classList.add('nav');
 
-  const navHome = document.createElement('div');
-  navHome.textContent = 'Home';
+  const navHome = document.createElement('li');
+  const navHomeLink = document.createElement('a');
+  navHomeLink.textContent = 'Home';
+  navHome.appendChild(navHomeLink);
 
-  navHome.addEventListener('click', () => {
+  navHomeLink.addEventListener('click', () => {
     content.replaceChildren();
     loadHome();
   });
 
   nav.appendChild(navHome);
 
-  const navMenu = document.createElement('div');
-  navMenu.textContent = 'Menu';
+  const navMenu = document.createElement('li');
+  const navMenuLink = document.createElement('a');
+  navMenuLink.textContent = 'Menu';
+  navMenu.appendChild(navMenuLink);
 
-  navMenu.addEventListener('click', () => {
+  navMenuLink.addEventListener('click', () => {
     content.replaceChildren();
     loadMenu();
   });
 
   nav.appendChild(navMenu);
 
-  const navContact = document.createElement('div');
-  navContact.textContent = 'Contact';
+  const navContact = document.createElement('li');
+  const navContactLink = document.createElement('a');
+  navContactLink.textContent = 'Contact';
+  navContact.appendChild(navContactLink);
 
-  navContact.addEventListener('click', () => {
+  navContactLink.addEventListener('click', () => {
     content.replaceChildren();
     loadContact();
   });
